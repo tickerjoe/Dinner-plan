@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinner Plan — Sept 16 to Oct 31, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2B2117;
+    --ink-soft: #5C4F41;
+    --base: #FAF6EF;
+    --line: rgba(43,33,23,0.14);
+    --rust: #B5542B;
+    --plum: #6B3F4E;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--base);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.4;
+  }
+  header.hero {
+    padding: 56px 24px 40px;
+    text-align: center;
+    border-bottom: 2px solid var(--ink);
+  }
+  header.hero h1 {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  header.hero p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  .dow-header {
+    display: none;
+  }
+  .week-block {
+    background: color-mix(in srgb, var(--week-bg) 55%, var(--base));
+    border: 1px solid color-mix(in srgb, var(--week-accent) 45%, transparent);
+    border-radius: 4px;
+    margin-bottom: 28px;
+    padding: 18px 18px 20px;
+  }
+  .week-label {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--week-accent);
+    margin-bottom: 12px;
+  }
+  table.week-grid {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .daycell {
+    vertical-align: top;
+    width: 14.28%;
+    padding: 10px 8px;
+    border: 1px solid color-mix(in srgb, var(--week-accent) 30%, transparent);
+    background: color-mix(in srgb, var(--base) 88%, white);
+    font-size: 0.82rem;
+  }
+  .daycell.empty {
+    background: transparent;
+    border-color: transparent;
+  }
+  .datenum {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  .dish {
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.25;
+  }
+  .nacho-dish { color: var(--rust); }
+  .cite {
+    font-size: 0.74rem;
+    color: var(--ink-soft);
+  }
+  .cite a { color: var(--plum); text-decoration: none; border-bottom: 1px dotted var(--plum); }
+  .cite a:hover { border-bottom-style: solid; }
+  .cite-muted { font-style: italic; }
+  .tag {
+    display: inline-block;
+    font-size: 0.66rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+  }
+  .tag-leftover { background: var(--plum); color: #fff; }
+  .tag-brinner { background: var(--rust); color: #fff; }
+  .week-extras {
+    display: flex;
+    gap: 18px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed color-mix(in srgb, var(--week-accent) 50%, transparent);
+    flex-wrap: wrap;
+  }
+  .extra {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex: 1 1 260px;
+  }
+  .extra-icon { font-size: 1rem; }
+  .extra-label {
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin-right: 2px;
+  }
+  .extra a { color: var(--plum); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--plum); }
+  .extra-cite { color: var(--ink-soft); font-size: 0.78rem; }
+  .legend {
+    max-width: 980px;
+    margin: 0 auto 8px;
+    padding: 0 16px;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  footer {
+    text-align: center;
+    padding: 30px 16px 50px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+  @media (max-width: 720px) {
+    table.week-grid, .week-grid tbody, .week-grid tr { display: block; }
+    .daycell { display: block; width: 100%; margin-bottom: 6px; border-radius: 3px; }
+    .daycell.empty { display: none; }
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>Dinner, Sorted</h1>
+  <p>Sept 16 – Oct 31, 2026 · dinner-only plan built from the Crock-Pot Recipe Collection and the Better Homes and Gardens New Cook Book. Thursdays are always leftover night.</p>
+</header>
+
+<div class="legend">
+  <span><span class="tag tag-leftover" style="padding:2px 6px;">Leftover</span> Tuesday's (or noted day's) dinner, reheated</span>
+  <span><span class="tag tag-brinner" style="padding:2px 6px;">Breakfast for Dinner</span> once a month</span>
+  <span>🧀 Wifey Legendary Nachos — every ~10 days</span>
+</div>
+
+<main>
+
+    <section class="week-block" style="--week-bg:#F6E2B8; --week-accent:#8A6A1F;">
+      <div class="week-label">Sept 13 – 19</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell empty"><div class="datenum"></div></td><td class="daycell empty"><div class="datenum"></div></td><td class="daycell empty"><div class="datenum"></div></td><td class="daycell">
+      <div class="datenum">Sep 16</div>
+      
+          <div class="dish">Herb-Roasted Chicken</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Herb-Roasted%20Chicken%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.467</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 17</div>
+      
+          <div class="dish">Chicken Cacciatore</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Cacciatore%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.469</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 18</div>
+      
+          <div class="dish">Chicken Parmigiana</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Parmigiana%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.473</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 19</div>
+      
+          <div class="dish">Chicken with Mushrooms and Shallots</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20with%20Mushrooms%20and%20Shallots%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.269</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Almond%20Blueberry-Peach%20Cobbler%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Almond Blueberry-Peach Cobbler</a>
+          <span class="extra-cite">Slow Cooker Cookbook, p.491</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Whiskey%20Sour%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Whiskey Sour</a>
+          <span class="extra-cite">New Cook Book, p.72</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="week-block" style="--week-bg:#E3C9A6; --week-accent:#8C5A2E;">
+      <div class="week-label">Sept 20 – 26</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell">
+      <div class="datenum">Sep 20</div>
+      
+          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
+          <div class="cite cite-muted">our recipe — no page needed</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 21</div>
+      
+          <div class="dish">Kalamata Lemon Chicken</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Kalamata%20Lemon%20Chicken%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.479</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 22</div>
+      
+          <div class="dish">Roasted Pork Tenderloin with Red Pepper Pesto</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Roasted%20Pork%20Tenderloin%20with%20Red%20Pepper%20Pesto%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.397</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 23</div>
+      
+          <div class="dish">Oven-Baked Pork Chops</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Oven-Baked%20Pork%20Chops%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.400</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 24</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Roasted Pork Tenderloin with Red Pepper Pesto</div>
+          <div class="cite cite-muted">made Tuesday, Sep 22</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 25</div>
+      
+          <div class="dish">Pork Tenderloin with Rosemary Peaches</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Tenderloin%20with%20Rosemary%20Peaches%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.355</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 26</div>
+      
+          <div class="dish">Farmer&#x27;s Casserole</div>
+          <span class="tag tag-brinner">Breakfast for Dinner</span>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Farmer%27s%20Casserole%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.133</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Apple%20Crisp%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Apple Crisp</a>
+          <span class="extra-cite">New Cook Book, p.272</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Spiked%20Apple%20Cider%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Spiked Apple Cider</a>
+          <span class="extra-cite">Slow Cooker Cookbook, p.91</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="week-block" style="--week-bg:#C9D6B0; --week-accent:#4C6B33;">
+      <div class="week-label">Sept 27 – Oct 3</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell">
+      <div class="datenum">Sep 27</div>
+      
+          <div class="dish">Pork Medallions with Fennel and Pancetta</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Medallions%20with%20Fennel%20and%20Pancetta%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.397</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 28</div>
+      
+          <div class="dish">Mustard and Herb Pork Loin</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Mustard%20and%20Herb%20Pork%20Loin%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.370</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 29</div>
+      
+          <div class="dish">Beef Pot Roast</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Pot%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.385</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 30</div>
+      
+          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
+          <div class="cite cite-muted">our recipe — no page needed</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 1</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Beef Pot Roast</div>
+          <div class="cite cite-muted">made Tuesday, Sep 29</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 2</div>
+      
+          <div class="dish">Steak with Creamy Onion Sauce</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Steak%20with%20Creamy%20Onion%20Sauce%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.380</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 3</div>
+      
+          <div class="dish">Classic Pot Roast</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Classic%20Pot%20Roast%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.410</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Cinnamon-Pecan%20Stuffed%20Apples%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Cinnamon-Pecan Stuffed Apples</a>
+          <span class="extra-cite">Slow Cooker Cookbook, p.494</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Sidecar%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Sidecar</a>
+          <span class="extra-cite">New Cook Book, p.72</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="week-block" style="--week-bg:#C7A87A; --week-accent:#6B4E22;">
+      <div class="week-label">Oct 4 – 10</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell">
+      <div class="datenum">Oct 4</div>
+      
+          <div class="dish">Balsamic-Glazed Flank Steak with Fall Fruit Salsa</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Balsamic-Glazed%20Flank%20Steak%20with%20Fall%20Fruit%20Salsa%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.386</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 5</div>
+      
+          <div class="dish">Swiss Steak</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Swiss%20Steak%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.384</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 6</div>
+      
+          <div class="dish">Cioppino</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Cioppino%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.221</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 7</div>
+      
+          <div class="dish">Tilapia Veracruz</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Tilapia%20Veracruz%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.303</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 8</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Cioppino</div>
+          <div class="cite cite-muted">made Tuesday, Oct 6</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 9</div>
+      
+          <div class="dish">Shrimp Scampi</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Shrimp%20Scampi%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.310</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 10</div>
+      
+          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
+          <div class="cite cite-muted">our recipe — no page needed</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Caramel%20Flans%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Caramel Flans</a>
+          <span class="extra-cite">New Cook Book, p.280</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Manhattan%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Manhattan</a>
+          <span class="extra-cite">New Cook Book, p.72</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="week-block" style="--week-bg:#B7CFC1; --week-accent:#33604C;">
+      <div class="week-label">Oct 11 – 17</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell">
+      <div class="datenum">Oct 11</div>
+      
+          <div class="dish">Baked Fish</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Baked%20Fish%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.302</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 12</div>
+      
+          <div class="dish">Herb-Rubbed Bison Sirloin Tip Roast</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Herb-Rubbed%20Bison%20Sirloin%20Tip%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.408</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 13</div>
+      
+          <div class="dish">Beef Bourguignon</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Bourguignon%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.194</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 14</div>
+      
+          <div class="dish">Apple-Bison Burgers</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Apple-Bison%20Burgers%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.408</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 15</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Beef Bourguignon</div>
+          <div class="cite cite-muted">made Tuesday, Oct 13</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 16</div>
+      
+          <div class="dish">Beer-Braised Beef</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Beer-Braised%20Beef%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.429</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 17</div>
+      
+          <div class="dish">Quinoa Caprese Casserole</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Quinoa%20Caprese%20Casserole%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.235</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Dark%20Chocolate%20Brownies%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Dark Chocolate Brownies</a>
+          <span class="extra-cite">Slow Cooker Cookbook, p.496</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Mulled%20Wine%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Mulled Wine</a>
+          <span class="extra-cite">Slow Cooker Cookbook, p.93</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="week-block" style="--week-bg:#E0AFA0; --week-accent:#8C3E3A;">
+      <div class="week-label">Oct 18 – 24</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell">
+      <div class="datenum">Oct 18</div>
+      
+          <div class="dish">Vegetarian Lasagna</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Vegetarian%20Lasagna%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.238</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 19</div>
+      
+          <div class="dish">Farfalle with Mushrooms and Spinach</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Farfalle%20with%20Mushrooms%20and%20Spinach%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.426</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 20</div>
+      
+          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
+          <div class="cite cite-muted">our recipe — no page needed</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 21</div>
+      
+          <div class="dish">Fusilli with Garlic Pesto and Pecorino</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Fusilli%20with%20Garlic%20Pesto%20and%20Pecorino%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.429</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 22</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Farfalle with Mushrooms and Spinach</div>
+          <div class="cite cite-muted">made Monday, Oct 19</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 23</div>
+      
+          <div class="dish">Chicken Marsala</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Marsala%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.478</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 24</div>
+      
+          <div class="dish">Breakfast Pizza</div>
+          <span class="tag tag-brinner">Breakfast for Dinner</span>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Breakfast%20Pizza%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.132</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Molten%20Chocolate%20Cakes%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Molten Chocolate Cakes</a>
+          <span class="extra-cite">New Cook Book, p.279</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Cosmopolitan%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Cosmopolitan</a>
+          <span class="extra-cite">New Cook Book, p.72</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="week-block" style="--week-bg:#A9BFD1; --week-accent:#385A73;">
+      <div class="week-label">Oct 25 – 31</div>
+      <table class="week-grid">
+        <tbody><tr><td class="daycell">
+      <div class="datenum">Oct 25</div>
+      
+          <div class="dish">Coq au Vin</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Coq%20au%20Vin%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.471</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 26</div>
+      
+          <div class="dish">Chicken Piccata</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Piccata%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.286</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 27</div>
+      
+          <div class="dish">Beef Stroganoff</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Stroganoff%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.382</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 28</div>
+      
+          <div class="dish">Pork Chops with Apples and Onions</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Chops%20with%20Apples%20and%20Onions%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.340</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 29</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Beef Stroganoff</div>
+          <div class="cite cite-muted">made Tuesday, Oct 27</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 30</div>
+      
+          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
+          <div class="cite cite-muted">our recipe — no page needed</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 31</div>
+      
+          <div class="dish">Chicken Enchiladas</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Enchiladas%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.232</div>
+        
+    </td></tr></tbody>
+      </table>
+      <div class="week-extras">
+        <div class="extra">
+          <span class="extra-icon">🍰</span>
+          <span class="extra-label">Dessert of the week</span>
+          <a href="https://www.google.com/search?q=%22Pumpkin%20Bread%20Pudding%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Pumpkin Bread Pudding</a>
+          <span class="extra-cite">Slow Cooker Cookbook, p.503</span>
+        </div>
+        <div class="extra">
+          <span class="extra-icon">🍸</span>
+          <span class="extra-label">Cocktail of the week</span>
+          <a href="https://www.google.com/search?q=%22Vodka%20Gimlet%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Vodka Gimlet</a>
+          <span class="extra-cite">New Cook Book, p.72</span>
+        </div>
+      </div>
+    </section>
+    
+</main>
+
+<footer>
+  Made with the Crock-Pot® Recipe Collection and Better Homes &amp; Gardens New Cook Book (16th ed.). Recipe links go to a search for that title — always double-check against your copy of the book by page number.<br>
+  Want November added? Just ask.
+</footer>
+</body>
+</html>
