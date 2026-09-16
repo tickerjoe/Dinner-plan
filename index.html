@@ -87,6 +87,14 @@
     font-weight: 600;
     font-size: 0.9rem;
     color: var(--ink-soft);
+    margin-bottom: 1px;
+  }
+  .weekday {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    opacity: 0.75;
     margin-bottom: 6px;
   }
   .dish {
@@ -162,12 +170,12 @@
 </head>
 <body>
 <header class="hero">
-  <h1>Dinner, Sorted</h1>
-  <p>Sept 16 – Oct 31, 2026 · dinner-only plan built from the Crock-Pot Recipe Collection and the Better Homes and Gardens New Cook Book. Thursdays are always leftover night.</p>
+  <h1>Burtons Menu</h1>
+  <p>Sept 16 – Oct 31, 2026 · dinner-only plan built from the Crock-Pot Recipe Collection and the Better Homes and Gardens New Cook Book. Tuesday, Wednesday, and Thursday are always leftover nights.</p>
 </header>
 
 <div class="legend">
-  <span><span class="tag tag-leftover" style="padding:2px 6px;">Leftover</span> Tuesday's (or noted day's) dinner, reheated</span>
+  <span><span class="tag tag-leftover" style="padding:2px 6px;">Leftover</span> Tue/Wed/Thu, each reheating a different earlier dinner</span>
   <span><span class="tag tag-brinner" style="padding:2px 6px;">Breakfast for Dinner</span> once a month</span>
   <span>🧀 Wifey Legendary Nachos — every ~10 days</span>
 </div>
@@ -179,6 +187,7 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell empty"><div class="datenum"></div></td><td class="daycell empty"><div class="datenum"></div></td><td class="daycell empty"><div class="datenum"></div></td><td class="daycell">
       <div class="datenum">Sep 16</div>
+      <div class="weekday">Wednesday</div>
       
           <div class="dish">Herb-Roasted Chicken</div>
           
@@ -186,6 +195,7 @@
         
     </td><td class="daycell">
       <div class="datenum">Sep 17</div>
+      <div class="weekday">Thursday</div>
       
           <div class="dish">Chicken Cacciatore</div>
           
@@ -193,6 +203,7 @@
         
     </td><td class="daycell">
       <div class="datenum">Sep 18</div>
+      <div class="weekday">Friday</div>
       
           <div class="dish">Chicken Parmigiana</div>
           
@@ -200,6 +211,7 @@
         
     </td><td class="daycell">
       <div class="datenum">Sep 19</div>
+      <div class="weekday">Saturday</div>
       
           <div class="dish">Chicken with Mushrooms and Shallots</div>
           
@@ -228,12 +240,14 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Sep 20</div>
+      <div class="weekday">Sunday</div>
       
           <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
           <div class="cite cite-muted">our recipe — no page needed</div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 21</div>
+      <div class="weekday">Monday</div>
       
           <div class="dish">Kalamata Lemon Chicken</div>
           
@@ -241,34 +255,39 @@
         
     </td><td class="daycell">
       <div class="datenum">Sep 22</div>
+      <div class="weekday">Tuesday</div>
       
-          <div class="dish">Roasted Pork Tenderloin with Red Pepper Pesto</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Roasted%20Pork%20Tenderloin%20with%20Red%20Pepper%20Pesto%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.397</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Chicken with Mushrooms and Shallots</div>
+          <div class="cite cite-muted">made Saturday, Sep 19</div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 23</div>
+      <div class="weekday">Wednesday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Chicken Parmigiana</div>
+          <div class="cite cite-muted">made Friday, Sep 18</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 24</div>
+      <div class="weekday">Thursday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Kalamata Lemon Chicken</div>
+          <div class="cite cite-muted">made Monday, Sep 21</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 25</div>
+      <div class="weekday">Friday</div>
       
           <div class="dish">Oven-Baked Pork Chops</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Oven-Baked%20Pork%20Chops%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.400</div>
         
     </td><td class="daycell">
-      <div class="datenum">Sep 24</div>
-      
-          <span class="tag tag-leftover">Leftover Night</span>
-          <div class="dish">Roasted Pork Tenderloin with Red Pepper Pesto</div>
-          <div class="cite cite-muted">made Tuesday, Sep 22</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Sep 25</div>
-      
-          <div class="dish">Pork Tenderloin with Rosemary Peaches</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Tenderloin%20with%20Rosemary%20Peaches%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.355</div>
-        
-    </td><td class="daycell">
       <div class="datenum">Sep 26</div>
+      <div class="weekday">Saturday</div>
       
           <div class="dish">Farmer&#x27;s Casserole</div>
           <span class="tag tag-brinner">Breakfast for Dinner</span>
@@ -297,40 +316,46 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Sep 27</div>
+      <div class="weekday">Sunday</div>
       
-          <div class="dish">Pork Medallions with Fennel and Pancetta</div>
+          <div class="dish">Pork Tenderloin with Rosemary Peaches</div>
           
-          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Medallions%20with%20Fennel%20and%20Pancetta%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.397</div>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Tenderloin%20with%20Rosemary%20Peaches%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.355</div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 28</div>
-      
-          <div class="dish">Mustard and Herb Pork Loin</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Mustard%20and%20Herb%20Pork%20Loin%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.370</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Sep 29</div>
-      
-          <div class="dish">Beef Pot Roast</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Pot%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.385</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Sep 30</div>
+      <div class="weekday">Monday</div>
       
           <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
           <div class="cite cite-muted">our recipe — no page needed</div>
         
     </td><td class="daycell">
-      <div class="datenum">Oct 1</div>
+      <div class="datenum">Sep 29</div>
+      <div class="weekday">Tuesday</div>
       
           <span class="tag tag-leftover">Leftover Night</span>
-          <div class="dish">Beef Pot Roast</div>
-          <div class="cite cite-muted">made Tuesday, Sep 29</div>
+          <div class="dish">Farmer&#x27;s Casserole</div>
+          <div class="cite cite-muted">made Saturday, Sep 26</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Sep 30</div>
+      <div class="weekday">Wednesday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Pork Tenderloin with Rosemary Peaches</div>
+          <div class="cite cite-muted">made Sunday, Sep 27</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 1</div>
+      <div class="weekday">Thursday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Farmer&#x27;s Casserole</div>
+          <div class="cite cite-muted">made Saturday, Sep 26</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 2</div>
+      <div class="weekday">Friday</div>
       
           <div class="dish">Steak with Creamy Onion Sauce</div>
           
@@ -338,10 +363,11 @@
         
     </td><td class="daycell">
       <div class="datenum">Oct 3</div>
+      <div class="weekday">Saturday</div>
       
-          <div class="dish">Classic Pot Roast</div>
+          <div class="dish">Beef Pot Roast</div>
           
-          <div class="cite"><a href="https://www.google.com/search?q=%22Classic%20Pot%20Roast%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.410</div>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Pot%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.385</div>
         
     </td></tr></tbody>
       </table>
@@ -366,6 +392,7 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 4</div>
+      <div class="weekday">Sunday</div>
       
           <div class="dish">Balsamic-Glazed Flank Steak with Fall Fruit Salsa</div>
           
@@ -373,44 +400,50 @@
         
     </td><td class="daycell">
       <div class="datenum">Oct 5</div>
+      <div class="weekday">Monday</div>
       
-          <div class="dish">Swiss Steak</div>
+          <div class="dish">Classic Pot Roast</div>
           
-          <div class="cite"><a href="https://www.google.com/search?q=%22Swiss%20Steak%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.384</div>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Classic%20Pot%20Roast%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.410</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 6</div>
+      <div class="weekday">Tuesday</div>
       
-          <div class="dish">Cioppino</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Cioppino%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.221</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Beef Pot Roast</div>
+          <div class="cite cite-muted">made Saturday, Oct 3</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 7</div>
+      <div class="weekday">Wednesday</div>
       
-          <div class="dish">Tilapia Veracruz</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Tilapia%20Veracruz%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.303</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Balsamic-Glazed Flank Steak with Fall Fruit Salsa</div>
+          <div class="cite cite-muted">made Sunday, Oct 4</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 8</div>
+      <div class="weekday">Thursday</div>
       
           <span class="tag tag-leftover">Leftover Night</span>
-          <div class="dish">Cioppino</div>
-          <div class="cite cite-muted">made Tuesday, Oct 6</div>
+          <div class="dish">Classic Pot Roast</div>
+          <div class="cite cite-muted">made Monday, Oct 5</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 9</div>
-      
-          <div class="dish">Shrimp Scampi</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Shrimp%20Scampi%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.310</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Oct 10</div>
+      <div class="weekday">Friday</div>
       
           <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
           <div class="cite cite-muted">our recipe — no page needed</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 10</div>
+      <div class="weekday">Saturday</div>
+      
+          <div class="dish">Baked Fish</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Baked%20Fish%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.302</div>
         
     </td></tr></tbody>
       </table>
@@ -435,52 +468,59 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 11</div>
+      <div class="weekday">Sunday</div>
       
-          <div class="dish">Baked Fish</div>
+          <div class="dish">Shrimp Scampi</div>
           
-          <div class="cite"><a href="https://www.google.com/search?q=%22Baked%20Fish%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.302</div>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Shrimp%20Scampi%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.310</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 12</div>
+      <div class="weekday">Monday</div>
+      
+          <div class="dish">Cioppino</div>
+          
+          <div class="cite"><a href="https://www.google.com/search?q=%22Cioppino%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.221</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 13</div>
+      <div class="weekday">Tuesday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Baked Fish</div>
+          <div class="cite cite-muted">made Saturday, Oct 10</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 14</div>
+      <div class="weekday">Wednesday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Shrimp Scampi</div>
+          <div class="cite cite-muted">made Sunday, Oct 11</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 15</div>
+      <div class="weekday">Thursday</div>
+      
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Cioppino</div>
+          <div class="cite cite-muted">made Monday, Oct 12</div>
+        
+    </td><td class="daycell">
+      <div class="datenum">Oct 16</div>
+      <div class="weekday">Friday</div>
       
           <div class="dish">Herb-Rubbed Bison Sirloin Tip Roast</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Herb-Rubbed%20Bison%20Sirloin%20Tip%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.408</div>
         
     </td><td class="daycell">
-      <div class="datenum">Oct 13</div>
-      
-          <div class="dish">Beef Bourguignon</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Bourguignon%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.194</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Oct 14</div>
+      <div class="datenum">Oct 17</div>
+      <div class="weekday">Saturday</div>
       
           <div class="dish">Apple-Bison Burgers</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Apple-Bison%20Burgers%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.408</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Oct 15</div>
-      
-          <span class="tag tag-leftover">Leftover Night</span>
-          <div class="dish">Beef Bourguignon</div>
-          <div class="cite cite-muted">made Tuesday, Oct 13</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Oct 16</div>
-      
-          <div class="dish">Beer-Braised Beef</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Beer-Braised%20Beef%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.429</div>
-        
-    </td><td class="daycell">
-      <div class="datenum">Oct 17</div>
-      
-          <div class="dish">Quinoa Caprese Casserole</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Quinoa%20Caprese%20Casserole%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.235</div>
         
     </td></tr></tbody>
       </table>
@@ -505,13 +545,14 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 18</div>
+      <div class="weekday">Sunday</div>
       
-          <div class="dish">Vegetarian Lasagna</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Vegetarian%20Lasagna%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.238</div>
+          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
+          <div class="cite cite-muted">our recipe — no page needed</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 19</div>
+      <div class="weekday">Monday</div>
       
           <div class="dish">Farfalle with Mushrooms and Spinach</div>
           
@@ -519,19 +560,23 @@
         
     </td><td class="daycell">
       <div class="datenum">Oct 20</div>
+      <div class="weekday">Tuesday</div>
       
-          <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
-          <div class="cite cite-muted">our recipe — no page needed</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Apple-Bison Burgers</div>
+          <div class="cite cite-muted">made Saturday, Oct 17</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 21</div>
+      <div class="weekday">Wednesday</div>
       
-          <div class="dish">Fusilli with Garlic Pesto and Pecorino</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Fusilli%20with%20Garlic%20Pesto%20and%20Pecorino%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.429</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Herb-Rubbed Bison Sirloin Tip Roast</div>
+          <div class="cite cite-muted">made Friday, Oct 16</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 22</div>
+      <div class="weekday">Thursday</div>
       
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Farfalle with Mushrooms and Spinach</div>
@@ -539,13 +584,15 @@
         
     </td><td class="daycell">
       <div class="datenum">Oct 23</div>
+      <div class="weekday">Friday</div>
       
-          <div class="dish">Chicken Marsala</div>
+          <div class="dish">Vegetarian Lasagna</div>
           
-          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Marsala%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.478</div>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Vegetarian%20Lasagna%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.238</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 24</div>
+      <div class="weekday">Saturday</div>
       
           <div class="dish">Breakfast Pizza</div>
           <span class="tag tag-brinner">Breakfast for Dinner</span>
@@ -574,13 +621,15 @@
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 25</div>
+      <div class="weekday">Sunday</div>
       
-          <div class="dish">Coq au Vin</div>
+          <div class="dish">Chicken Marsala</div>
           
-          <div class="cite"><a href="https://www.google.com/search?q=%22Coq%20au%20Vin%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.471</div>
+          <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Marsala%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.478</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 26</div>
+      <div class="weekday">Monday</div>
       
           <div class="dish">Chicken Piccata</div>
           
@@ -588,33 +637,38 @@
         
     </td><td class="daycell">
       <div class="datenum">Oct 27</div>
+      <div class="weekday">Tuesday</div>
       
-          <div class="dish">Beef Stroganoff</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Stroganoff%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.382</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Breakfast Pizza</div>
+          <div class="cite cite-muted">made Saturday, Oct 24</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 28</div>
+      <div class="weekday">Wednesday</div>
       
-          <div class="dish">Pork Chops with Apples and Onions</div>
-          
-          <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Chops%20with%20Apples%20and%20Onions%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.340</div>
+          <span class="tag tag-leftover">Leftover Night</span>
+          <div class="dish">Chicken Marsala</div>
+          <div class="cite cite-muted">made Sunday, Oct 25</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 29</div>
+      <div class="weekday">Thursday</div>
       
           <span class="tag tag-leftover">Leftover Night</span>
-          <div class="dish">Beef Stroganoff</div>
-          <div class="cite cite-muted">made Tuesday, Oct 27</div>
+          <div class="dish">Chicken Piccata</div>
+          <div class="cite cite-muted">made Monday, Oct 26</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 30</div>
+      <div class="weekday">Friday</div>
       
           <div class="dish nacho-dish">🧀 Wifey Legendary Nachos!!</div>
           <div class="cite cite-muted">our recipe — no page needed</div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 31</div>
+      <div class="weekday">Saturday</div>
       
           <div class="dish">Chicken Enchiladas</div>
           
