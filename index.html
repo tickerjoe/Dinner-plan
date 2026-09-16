@@ -58,12 +58,31 @@
     margin-bottom: 28px;
     padding: 18px 18px 20px;
   }
+  .week-label-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
   .week-label {
     font-family: 'Fraunces', serif;
     font-weight: 600;
     font-size: 1.15rem;
     color: var(--week-accent);
-    margin-bottom: 12px;
+  }
+  .week-pdf-link {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--plum);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--plum);
+    white-space: nowrap;
+  }
+  .week-pdf-link:hover {
+    border-bottom-style: solid;
   }
   table.week-grid {
     width: 100%;
@@ -183,7 +202,10 @@
 <main>
 
     <section class="week-block" style="--week-bg:#F6E2B8; --week-accent:#8A6A1F;">
-      <div class="week-label">Sept 13 – 19</div>
+      <div class="week-label-row">
+        <div class="week-label">Sept 13 – 19</div>
+        
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell empty"><div class="datenum"></div></td><td class="daycell empty"><div class="datenum"></div></td><td class="daycell empty"><div class="datenum"></div></td><td class="daycell">
       <div class="datenum">Sep 16</div>
@@ -236,7 +258,10 @@
     </section>
     
     <section class="week-block" style="--week-bg:#E3C9A6; --week-accent:#8C5A2E;">
-      <div class="week-label">Sept 20 – 26</div>
+      <div class="week-label-row">
+        <div class="week-label">Sept 20 – 26</div>
+        <a class="week-pdf-link" href="week-sep20%20burton.pdf" target="_blank" rel="noopener">📄 This week&#x27;s recipes (edited)</a>
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Sep 20</div>
@@ -312,7 +337,10 @@
     </section>
     
     <section class="week-block" style="--week-bg:#C9D6B0; --week-accent:#4C6B33;">
-      <div class="week-label">Sept 27 – Oct 3</div>
+      <div class="week-label-row">
+        <div class="week-label">Sept 27 – Oct 3</div>
+        
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Sep 27</div>
@@ -388,7 +416,10 @@
     </section>
     
     <section class="week-block" style="--week-bg:#C7A87A; --week-accent:#6B4E22;">
-      <div class="week-label">Oct 4 – 10</div>
+      <div class="week-label-row">
+        <div class="week-label">Oct 4 – 10</div>
+        
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 4</div>
@@ -464,7 +495,10 @@
     </section>
     
     <section class="week-block" style="--week-bg:#B7CFC1; --week-accent:#33604C;">
-      <div class="week-label">Oct 11 – 17</div>
+      <div class="week-label-row">
+        <div class="week-label">Oct 11 – 17</div>
+        
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 11</div>
@@ -541,7 +575,10 @@
     </section>
     
     <section class="week-block" style="--week-bg:#E0AFA0; --week-accent:#8C3E3A;">
-      <div class="week-label">Oct 18 – 24</div>
+      <div class="week-label-row">
+        <div class="week-label">Oct 18 – 24</div>
+        
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 18</div>
@@ -617,7 +654,10 @@
     </section>
     
     <section class="week-block" style="--week-bg:#A9BFD1; --week-accent:#385A73;">
-      <div class="week-label">Oct 25 – 31</div>
+      <div class="week-label-row">
+        <div class="week-label">Oct 25 – 31</div>
+        
+      </div>
       <table class="week-grid">
         <tbody><tr><td class="daycell">
       <div class="datenum">Oct 25</div>
