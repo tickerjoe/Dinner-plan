@@ -129,6 +129,19 @@
   .cite a { color: var(--plum); text-decoration: none; border-bottom: 1px dotted var(--plum); }
   .cite a:hover { border-bottom-style: solid; }
   .cite-muted { font-style: italic; }
+  .recipe-jump {
+    margin-top: 6px;
+    padding-top: 4px;
+    border-top: 1px dotted color-mix(in srgb, var(--week-accent) 40%, transparent);
+  }
+  .recipe-jump a {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--rust);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--rust);
+  }
+  .recipe-jump a:hover { border-bottom-style: solid; }
   .tag {
     display: inline-block;
     font-size: 0.66rem;
@@ -151,8 +164,15 @@
     font-size: 0.85rem;
     display: flex;
     align-items: baseline;
+    flex-wrap: wrap;
     gap: 6px;
     flex: 1 1 260px;
+  }
+  .extra .recipe-jump {
+    flex-basis: 100%;
+    border-top: none;
+    margin-top: 2px;
+    padding-top: 0;
   }
   .extra-icon { font-size: 1rem; }
   .extra-label {
@@ -214,6 +234,7 @@
           <div class="dish">Herb-Roasted Chicken</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Herb-Roasted%20Chicken%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.467</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=2" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 17</div>
@@ -222,6 +243,7 @@
           <div class="dish">Chicken Cacciatore</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Cacciatore%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.469</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=3" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 18</div>
@@ -230,6 +252,7 @@
           <div class="dish">Chicken Parmigiana</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Parmigiana%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.473</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=4" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 19</div>
@@ -238,6 +261,7 @@
           <div class="dish">Chicken with Mushrooms and Shallots</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20with%20Mushrooms%20and%20Shallots%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.269</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=5" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -247,12 +271,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Almond%20Blueberry-Peach%20Cobbler%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Almond Blueberry-Peach Cobbler</a>
           <span class="extra-cite">Slow Cooker Cookbook, p.491</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=6" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Whiskey%20Sour%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Whiskey Sour</a>
           <span class="extra-cite">New Cook Book, p.72</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=7" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
@@ -277,6 +303,7 @@
           <div class="dish">Kalamata Lemon Chicken</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Kalamata%20Lemon%20Chicken%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.479</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=8" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 22</div>
@@ -285,6 +312,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Chicken with Mushrooms and Shallots</div>
           <div class="cite cite-muted">made Saturday, Sep 19</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=5" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 23</div>
@@ -293,6 +321,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Chicken Parmigiana</div>
           <div class="cite cite-muted">made Friday, Sep 18</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=4" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 24</div>
@@ -301,6 +330,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Kalamata Lemon Chicken</div>
           <div class="cite cite-muted">made Monday, Sep 21</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=8" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 25</div>
@@ -309,6 +339,7 @@
           <div class="dish">Oven-Baked Pork Chops</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Oven-Baked%20Pork%20Chops%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.400</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=9" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 26</div>
@@ -317,6 +348,7 @@
           <div class="dish">Farmer&#x27;s Casserole</div>
           <span class="tag tag-brinner">Breakfast for Dinner</span>
           <div class="cite"><a href="https://www.google.com/search?q=%22Farmer%27s%20Casserole%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.133</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=10" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -326,12 +358,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Apple%20Crisp%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Apple Crisp</a>
           <span class="extra-cite">New Cook Book, p.272</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=11" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Spiked%20Apple%20Cider%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Spiked Apple Cider</a>
           <span class="extra-cite">Slow Cooker Cookbook, p.91</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=12" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
@@ -349,6 +383,7 @@
           <div class="dish">Pork Tenderloin with Rosemary Peaches</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Pork%20Tenderloin%20with%20Rosemary%20Peaches%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.355</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=13" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 28</div>
@@ -364,6 +399,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Farmer&#x27;s Casserole</div>
           <div class="cite cite-muted">made Saturday, Sep 26</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=10" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Sep 30</div>
@@ -372,6 +408,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Pork Tenderloin with Rosemary Peaches</div>
           <div class="cite cite-muted">made Sunday, Sep 27</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=13" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 1</div>
@@ -380,6 +417,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Farmer&#x27;s Casserole</div>
           <div class="cite cite-muted">made Saturday, Sep 26</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=10" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 2</div>
@@ -388,6 +426,7 @@
           <div class="dish">Steak with Creamy Onion Sauce</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Steak%20with%20Creamy%20Onion%20Sauce%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.380</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=19" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 3</div>
@@ -396,6 +435,7 @@
           <div class="dish">Beef Pot Roast</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Beef%20Pot%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.385</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=16" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -405,12 +445,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Cinnamon-Pecan%20Stuffed%20Apples%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Cinnamon-Pecan Stuffed Apples</a>
           <span class="extra-cite">Slow Cooker Cookbook, p.494</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=17" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Sidecar%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Sidecar</a>
           <span class="extra-cite">New Cook Book, p.72</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=18" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
@@ -428,6 +470,7 @@
           <div class="dish">Balsamic-Glazed Flank Steak with Fall Fruit Salsa</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Balsamic-Glazed%20Flank%20Steak%20with%20Fall%20Fruit%20Salsa%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.386</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=21" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 5</div>
@@ -436,6 +479,7 @@
           <div class="dish">Classic Pot Roast</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Classic%20Pot%20Roast%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.410</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=20" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 6</div>
@@ -444,6 +488,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Beef Pot Roast</div>
           <div class="cite cite-muted">made Saturday, Oct 3</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=16" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 7</div>
@@ -452,6 +497,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Balsamic-Glazed Flank Steak with Fall Fruit Salsa</div>
           <div class="cite cite-muted">made Sunday, Oct 4</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=21" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 8</div>
@@ -460,6 +506,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Classic Pot Roast</div>
           <div class="cite cite-muted">made Monday, Oct 5</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=20" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 9</div>
@@ -475,6 +522,7 @@
           <div class="dish">Baked Fish</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Baked%20Fish%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.302</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=22" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -484,12 +532,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Caramel%20Flans%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Caramel Flans</a>
           <span class="extra-cite">New Cook Book, p.280</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=24" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Manhattan%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Manhattan</a>
           <span class="extra-cite">New Cook Book, p.72</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=25" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
@@ -507,6 +557,7 @@
           <div class="dish">Shrimp Scampi</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Shrimp%20Scampi%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.310</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=23" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 12</div>
@@ -515,6 +566,7 @@
           <div class="dish">Cioppino</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Cioppino%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.221</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=26" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 13</div>
@@ -523,6 +575,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Baked Fish</div>
           <div class="cite cite-muted">made Saturday, Oct 10</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=22" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 14</div>
@@ -531,6 +584,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Shrimp Scampi</div>
           <div class="cite cite-muted">made Sunday, Oct 11</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=23" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 15</div>
@@ -539,6 +593,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Cioppino</div>
           <div class="cite cite-muted">made Monday, Oct 12</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=26" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 16</div>
@@ -547,6 +602,7 @@
           <div class="dish">Herb-Rubbed Bison Sirloin Tip Roast</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Herb-Rubbed%20Bison%20Sirloin%20Tip%20Roast%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.408</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=27" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 17</div>
@@ -555,6 +611,7 @@
           <div class="dish">Apple-Bison Burgers</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Apple-Bison%20Burgers%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.408</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=28" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -564,12 +621,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Dark%20Chocolate%20Brownies%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Dark Chocolate Brownies</a>
           <span class="extra-cite">Slow Cooker Cookbook, p.496</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=29" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Mulled%20Wine%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Mulled Wine</a>
           <span class="extra-cite">Slow Cooker Cookbook, p.93</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=30" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
@@ -594,6 +653,7 @@
           <div class="dish">Farfalle with Mushrooms and Spinach</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Farfalle%20with%20Mushrooms%20and%20Spinach%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.426</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=32" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 20</div>
@@ -602,6 +662,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Apple-Bison Burgers</div>
           <div class="cite cite-muted">made Saturday, Oct 17</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=28" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 21</div>
@@ -610,6 +671,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Herb-Rubbed Bison Sirloin Tip Roast</div>
           <div class="cite cite-muted">made Friday, Oct 16</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=27" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 22</div>
@@ -618,6 +680,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Farfalle with Mushrooms and Spinach</div>
           <div class="cite cite-muted">made Monday, Oct 19</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=32" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 23</div>
@@ -626,6 +689,7 @@
           <div class="dish">Vegetarian Lasagna</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Vegetarian%20Lasagna%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.238</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=33" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 24</div>
@@ -634,6 +698,7 @@
           <div class="dish">Breakfast Pizza</div>
           <span class="tag tag-brinner">Breakfast for Dinner</span>
           <div class="cite"><a href="https://www.google.com/search?q=%22Breakfast%20Pizza%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.132</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=31" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -643,12 +708,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Molten%20Chocolate%20Cakes%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Molten Chocolate Cakes</a>
           <span class="extra-cite">New Cook Book, p.279</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=34" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Cosmopolitan%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Cosmopolitan</a>
           <span class="extra-cite">New Cook Book, p.72</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=35" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
@@ -666,6 +733,7 @@
           <div class="dish">Chicken Marsala</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Marsala%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.478</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=36" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 26</div>
@@ -674,6 +742,7 @@
           <div class="dish">Chicken Piccata</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Piccata%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Slow Cooker Cookbook</a>, p.286</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=37" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 27</div>
@@ -682,6 +751,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Breakfast Pizza</div>
           <div class="cite cite-muted">made Saturday, Oct 24</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=31" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 28</div>
@@ -690,6 +760,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Chicken Marsala</div>
           <div class="cite cite-muted">made Sunday, Oct 25</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=36" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 29</div>
@@ -698,6 +769,7 @@
           <span class="tag tag-leftover">Leftover Night</span>
           <div class="dish">Chicken Piccata</div>
           <div class="cite cite-muted">made Monday, Oct 26</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=37" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td><td class="daycell">
       <div class="datenum">Oct 30</div>
@@ -713,6 +785,7 @@
           <div class="dish">Chicken Enchiladas</div>
           
           <div class="cite"><a href="https://www.google.com/search?q=%22Chicken%20Enchiladas%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">New Cook Book</a>, p.232</div>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=38" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         
     </td></tr></tbody>
       </table>
@@ -722,12 +795,14 @@
           <span class="extra-label">Dessert of the week</span>
           <a href="https://www.google.com/search?q=%22Pumpkin%20Bread%20Pudding%22%20The%20Ultimate%20Slow%20Cooker%20Cookbook%20Linda%20Larsen" target="_blank" rel="noopener">Pumpkin Bread Pudding</a>
           <span class="extra-cite">Slow Cooker Cookbook, p.503</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=39" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
         <div class="extra">
           <span class="extra-icon">🍸</span>
           <span class="extra-label">Cocktail of the week</span>
           <a href="https://www.google.com/search?q=%22Vodka%20Gimlet%22%20Better%20Homes%20and%20Gardens%20New%20Cook%20Book" target="_blank" rel="noopener">Vodka Gimlet</a>
           <span class="extra-cite">New Cook Book, p.72</span>
+          <div class="recipe-jump"><a href="Burton%20menu%20recipe%20sep-oct%20PDF.pdf#page=40" target="_blank" rel="noopener">📖 Jump to recipe</a></div>
         </div>
       </div>
     </section>
